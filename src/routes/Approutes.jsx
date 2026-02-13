@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Slider from "../component/slider";
+import Home from "../pages/home";
 import Privacy from "../pages/privacy";
 import Courses from "../pages/courses";
 import Scholarship from "../pages/scholarship";
@@ -13,7 +13,7 @@ import ReturnRefund from "../pages/returnRefund";
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Slider />} />
+      <Route path="/" element={<Home />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/courses" element={<Courses />} />
       <Route path="/scholarships" element={<Scholarship />} />

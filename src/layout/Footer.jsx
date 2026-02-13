@@ -58,7 +58,7 @@ const Footer = () => {
                 { label: "Videos", href: "/videos" },
                 { label: "New Year 2026", href: "/newyear" },
                 { label: "Registration", href: "/registration" },
-                { label: "New Year 2026", href: "/newyear" },
+               
                 { label: "Login", href: "/login" },
                 { label: "Terms & Conditions", href: "/termsandconditions" },
                 { label: "Return & Refund", href: "/return" },

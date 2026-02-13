@@ -5,7 +5,8 @@ import img1 from "../assets/home.jpeg";
 
 const AboutSection = () => {
   return (
-    <section className="relative bg-[#f7f7f7] py-16 md:py-24 lg:py-28 overflow-hidden">
+<section className="relative bg-[#f7f7f7] py-16 md:py-24 lg:py-28 overflow-auto">
+
 
       {/* Top Yellow Curve */}
       <div className="absolute top-0 right-0 
@@ -26,8 +27,8 @@ const AboutSection = () => {
           {/* OUTER ROTATING CIRCLE */}
           <div className="absolute 
                           w-[350px] h-[350px] 
-                          sm:w-[450px] sm:h-[450px] 
-                          lg:w-[650px] lg:h-[650px]
+                          sm:w-[460px] sm:h-[460px] 
+                          lg:w-[660px] lg:h-[660px]
                           border-2 border-dashed border-gray-400 
                           rounded-full opacity-20 
                           animate-[spin_25s_linear_infinite] 
@@ -36,8 +37,8 @@ const AboutSection = () => {
           {/* INNER ROTATING CIRCLE */}
           <div className="absolute 
                           w-[250px] h-[250px] 
-                          sm:w-[350px] sm:h-[350px] 
-                          lg:w-[500px] lg:h-[500px]
+                          sm:w-[400px] sm:h-[400px] 
+                          lg:w-[550px] lg:h-[550px]
                           border-2 border-dashed border-gray-400 
                           rounded-full opacity-25 
                           animate-[spin_18s_linear_infinite_reverse] 

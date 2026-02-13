@@ -5,17 +5,15 @@ const ReturnRefund = () => {
     <div className="bg-gray-50 min-h-screen py-12 px-6">
       <div className="max-w-5xl mx-auto bg-white shadow-xl rounded-2xl p-10">
 
-        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 hover:underline">
           Return & Refund Policy – Olympiad ++ Examination Platform
         </h1>
 
-        <p className="text-gray-600 text-center mb-10 text-base sm:text-lg">
-          Effective Date: February 2026
-        </p>
+        
 
         {/* 1. Overview */}
         <section className="mb-8">
-          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-gray-800">
+          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-gray-800 hover:underline">
             1. Overview
           </h2>
           <p className="text-base sm:text-xl font-semibold text-gray-700 leading-relaxed">
@@ -27,7 +25,7 @@ const ReturnRefund = () => {
 
         {/* 2. 24 Hours Full Refund */}
         <section className="mb-8">
-          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-green-600">
+          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-green-600 hover:underline">
             2. 24-Hour Full Refund Policy
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-base sm:text-xl font-semibold text-gray-700">
@@ -40,7 +38,7 @@ const ReturnRefund = () => {
 
         {/* 3. 48 Hours Conditional Refund */}
         <section className="mb-8">
-          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-yellow-600">
+          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-yellow-600 hover:underline">
             3. 48-Hour Conditional Refund
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-base sm:text-xl font-semibold text-gray-700">
@@ -53,7 +51,7 @@ const ReturnRefund = () => {
 
         {/* 4. No Refund Situations */}
         <section className="mb-8">
-          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-red-600">
+          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-red-600 hover:underline">
             4. Non-Refundable Situations
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-base sm:text-xl font-semibold text-gray-700">
@@ -66,7 +64,7 @@ const ReturnRefund = () => {
 
         {/* 5. Refund Processing */}
         <section className="mb-8">
-          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-gray-800">
+          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-gray-800 hover:underline">
             5. Refund Processing Time
           </h2>
           <p className="text-base sm:text-xl font-semibold text-gray-700 leading-relaxed">
@@ -77,12 +75,12 @@ const ReturnRefund = () => {
 
         {/* 6. Contact */}
         <section>
-          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-gray-800">
+          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-gray-800 hover:underline">
             6. Contact for Refund
           </h2>
-          <p className="text-base sm:text-xl font-semibold text-gray-700">
-            thetruetopper@gmail.com
-          </p>
+          <p className="text-base sm:text-xl font-semibold text-gray-700 hover:underline">
+  thetruetopper@gmail.com
+</p>
         </section>
 
       </div>

@@ -5,12 +5,12 @@ import img1 from "../assets/slider1.jpeg";
 import img2 from "../assets/slider2.jpeg";
 import img3 from "../assets/slider3.jpeg";
 
-import AboutSection from "./aboutSection";
-import ThreeSection from "./threeSection";
-import WhyJoin from "./whyjoin";
-import DownloadApp from "./DownloadApp";
-import MediaGallery from "./mediaGallery";
-import SocialMedia from "./socialMedia";
+import AboutSection from "../component/aboutSection";
+import ThreeSection from "../component/threeSection";
+import WhyJoin from "../component/whyjoin";
+import DownloadApp from "../component/DownloadApp";
+import MediaGallery from "../component/mediaGallery";
+import SocialMedia from "../component/socialMedia";
 
 const slides = [
   { image: img1 },
@@ -18,7 +18,7 @@ const slides = [
   { image: img3 },
 ];
 
-const Slider = () => {
+const Home = () => {
   const [current, setCurrent] = useState(1);
   const [isPlaying, setIsPlaying] = useState(true);
   const [transition, setTransition] = useState(true);
@@ -193,4 +193,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default Home;

@@ -2,10 +2,10 @@ import React from "react";
 
 const Privacy = () => {
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">
+    <div className="bg-yellow-50 min-h-screen">
 
       {/* HERO SECTION */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-14 text-center">
+      <div className="bg-gradient-to-r from-[#FFD42A] to-[#FFC107] text-black py-14 text-center">
         <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
           Privacy Policy
         </h1>
@@ -20,7 +20,6 @@ const Privacy = () => {
       {/* CONTENT SECTION */}
       <div className="max-w-5xl mx-auto px-6 py-20 space-y-12">
 
-        {/* CARD */}
         {[
           {
             title: "Who we are",
@@ -61,12 +60,12 @@ const Privacy = () => {
         ].map((section, index) => (
           <div
             key={index}
-            className="bg-white rounded-3xl shadow-lg p-10 transition duration-500 hover:shadow-2xl hover:-translate-y-2"
+            className="bg-white border border-yellow-200 rounded-3xl shadow-md p-10 transition duration-500 hover:shadow-xl hover:-translate-y-2"
           >
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl font-bold text-yellow-600 mb-4">
               {section.title}
             </h2>
-            <p className="text-gray-600 leading-relaxed text-lg">
+            <p className="text-gray-700 leading-relaxed text-lg">
               {section.text}
             </p>
           </div>

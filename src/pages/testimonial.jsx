@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Testimonial = () => {
   return (
-    <section className="bg-gray-100 min-h-screen py-20 px-6">
+    <section className="bg-gray-100 min-h-screen py-5 px-6">
 
       <div className="max-w-5xl mx-auto">
 
@@ -13,7 +13,7 @@ const Testimonial = () => {
         </h1>
 
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-gray-600 mb-12">
+        <div className="flex items-center gap-2 text-sm text-gray-600 mb-5">
           <Link to="/" className="text-blue-600 hover:underline">
             Home
           </Link>
@@ -22,7 +22,7 @@ const Testimonial = () => {
         </div>
 
         {/* ================= Testimonial 1 ================= */}
-        <div className="mb-12">
+        <div className="mb-5">
 
           <h2 className="text-3xl font-semibold text-gray-900">
             Navaneet Jaiswal 
