@@ -58,7 +58,10 @@ const Footer = () => {
                 { label: "Videos", href: "/videos" },
                 { label: "New Year 2026", href: "/newyear" },
                 { label: "Registration", href: "/registration" },
+                { label: "New Year 2026", href: "/newyear" },
                 { label: "Login", href: "/login" },
+                { label: "Terms & Conditions", href: "/termsandconditions" },
+                { label: "Return & Refund", href: "/return" },
               ].map((item) => (
                 <a key={item.label} href={item.href} className="hover:text-yellow-400">
                   {item.label}

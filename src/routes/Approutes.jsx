@@ -7,6 +7,8 @@ import Courses from "../pages/courses";
 import Scholarship from "../pages/scholarship";
 import VissionMission from "../pages/vissionMission";
 import Testimonial from "../pages/testimonial";
+import TermsAndConditions from "../pages/termsandConditions";
+import ReturnRefund from "../pages/returnRefund";
 
 function AppRoutes() {
   return (
@@ -17,8 +19,11 @@ function AppRoutes() {
       <Route path="/scholarships" element={<Scholarship />} />
       <Route path="/vission" element={<VissionMission />} />
       <Route path="/testimonial" element={<Testimonial/>}/>
+      <Route path="/termsandconditions" element={<TermsAndConditions/>}/>
+      <Route path="/return" element={<ReturnRefund/>}/>
     </Routes>
   );
 }
 
 export default AppRoutes;
+ 
