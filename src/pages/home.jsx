@@ -11,6 +11,8 @@ import WhyJoin from "../component/whyjoin";
 import DownloadApp from "../component/DownloadApp";
 import MediaGallery from "../component/mediaGallery";
 import SocialMedia from "../component/socialMedia";
+import subjectCards from "./subjectCards";
+import SubjectCards from "./subjectCards";
 
 const slides = [
   { image: img1 },
@@ -185,6 +187,7 @@ const Home = () => {
       {/* ================= OTHER SECTIONS ================= */}
       <AboutSection />
       <ThreeSection />
+      <SubjectCards />
       <WhyJoin />
       {/* <DownloadApp />
       <MediaGallery /> */}

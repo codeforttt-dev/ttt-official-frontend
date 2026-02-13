@@ -10,6 +10,8 @@ import Testimonial from "../pages/testimonial";
 import TermsAndConditions from "../pages/termsandConditions";
 import ReturnRefund from "../pages/returnRefund";
 
+import RegistrationForm from "../component/registrationForm";
+
 function AppRoutes() {
   return (
     <Routes>
@@ -21,6 +23,7 @@ function AppRoutes() {
       <Route path="/testimonial" element={<Testimonial/>}/>
       <Route path="/termsandconditions" element={<TermsAndConditions/>}/>
       <Route path="/return" element={<ReturnRefund/>}/>
+      <Route path="/payment" element={<RegistrationForm/>}/>
     </Routes>
   );
 }
