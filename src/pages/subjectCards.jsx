@@ -45,7 +45,7 @@ const SubjectCards = () => {
             <div className="space-y-4">
               <button
                 onClick={() =>
-                  navigate("/register", {
+                  navigate("/payment", {
                     state: { subject: subject.name, classRange: "1-6" },
                   })
                 }
@@ -56,7 +56,7 @@ const SubjectCards = () => {
 
               <button
                 onClick={() =>
-                  navigate("/register", {
+                  navigate("/payment", {
                     state: { subject: subject.name, classRange: "6-12" },
                   })
                 }
