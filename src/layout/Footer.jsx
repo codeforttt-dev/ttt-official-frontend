@@ -60,7 +60,7 @@ const Footer = () => {
                 { label: "Registration", href: "/registration" },
                
                 { label: "Login", href: "/login" },
-                { label: "Terms & Conditions", href: "/termsandconditions" },
+                { label: "Terms & Conditions", href: "/termsconditions" },
                 { label: "Return & Refund", href: "/return" },
               ].map((item) => (
                 <a key={item.label} href={item.href} className="hover:text-yellow-400">

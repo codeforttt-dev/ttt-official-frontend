@@ -23,7 +23,7 @@ function AppRoutes() {
       <Route path="/scholarships" element={<Scholarship />} />
       <Route path="/vission" element={<VissionMission />} />
       <Route path="/testimonial" element={<Testimonial/>}/>
-      <Route path="/termsandconditions" element={<TermsAndConditions/>}/>
+<Route path="/termsconditions" element={<TermsAndConditions/>}/>
       <Route path="/return" element={<ReturnRefund/>}/>
       <Route path="/payment" element={<RegistrationForm/>}/>
       <Route path ="/signup" element={<Signup/>}/>
