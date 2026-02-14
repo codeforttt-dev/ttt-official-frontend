@@ -1,70 +1,95 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { FaAtom, FaFlask, FaSquareRootAlt } from "react-icons/fa";
+import { FaChild, FaUserGraduate } from "react-icons/fa";
 
-const subjects = [
-  { name: "Physics", icon: <FaAtom size={40} /> },
-  { name: "Chemistry", icon: <FaFlask size={40} /> },
-  { name: "Mathematics", icon: <FaSquareRootAlt size={40} /> },
+const classCards = [
+  {
+    title: "Classes 6-9",
+    description: "Junior Level Olympiad Examination",
+    icon: <FaChild size={55} />,
+    classRange: "6-9",
+  },
+  {
+    title: "Classes 10-12",
+    description: "Senior Level Olympiad Examination",
+    icon: <FaUserGraduate size={55} />,
+    classRange: "10-12",
+  },
 ];
 
 const SubjectCards = () => {
   const navigate = useNavigate();
 
+  const handleClick = (range) => {
+    navigate("/payment", {
+      state: { classRange: range },
+    });
+  };
+
   return (
-    <div className="min-h-screenbg-gradient-to-r from-[#FFD42A] to-[#FFC107]  py-16 px-6">
+    <div className="min-h-screen bg-gradient-to-r from-[#FFD42A] to-[#FFC107] py-20 px-6">
 
       {/* Heading */}
-      <div className="text-center mb-16">
-        <h1 className="text-5xl font-extrabold text-gray-800 mb-4">
+      <div className="text-center mb-20">
+        <h1 className="text-6xl font-extrabold text-gray-900 mb-4 tracking-wide drop-shadow-lg">
           Upcoming Exam Olympiad++
         </h1>
-        <p className="text-2xl text-gray-600">
-         the true topper right register for the international ethical entrepreneurship Olympiad plus plus 
-        </p>
+        <h2 className="text-3xl font-bold text-gray-800 opacity-90">
+          International Ethical Entrepreneurship Olympiad++
+        </h2>
+        <div className="w-40 h-1 bg-black mx-auto mt-6 rounded-full"></div>
       </div>
 
       {/* Cards */}
-      <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        {subjects.map((subject, index) => (
+      <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
+        {classCards.map((card, index) => (
           <div
             key={index}
-            className="group bg-white/70 backdrop-blur-xl border border-yellow-200 rounded-3xl shadow-xl p-10 text-center transition duration-500 hover:-translate-y-4 hover:shadow-2xl"
+            onClick={() => handleClick(card.classRange)}
+            className="relative group cursor-pointer 
+            bg-white/40 backdrop-blur-2xl 
+            border border-white/40 
+            rounded-[40px] 
+            shadow-2xl 
+            p-14 text-center 
+            transition-all duration-500 
+            hover:-translate-y-6 
+            hover:shadow-yellow-500/40 
+            hover:shadow-2xl 
+            hover:bg-white/60 
+            active:scale-95"
           >
+
+            {/* Glow Effect */}
+            <div className="absolute inset-0 rounded-[40px] bg-gradient-to-br from-yellow-300/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+            {/* Premium Badge */}
+            <div className="absolute -top-5 left-1/2 -translate-x-1/2 
+            bg-gradient-to-r from-black to-gray-800 
+            text-yellow-400 px-8 py-2 
+            rounded-full text-sm font-bold 
+            shadow-lg tracking-wider">
+              IEEO++
+            </div>
+
             {/* Icon */}
-            <div className="flex justify-center mb-6 text-yellow-500 group-hover:scale-110 transition">
-              {subject.icon}
+            <div className="flex justify-center mb-8 text-yellow-600 group-hover:scale-125 transition duration-500 mt-6">
+              {card.icon}
             </div>
 
             {/* Title */}
-            <h2 className="text-3xl font-bold text-gray-800 mb-8">
-              {subject.name}
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-wide">
+              {card.title}
             </h2>
 
-            {/* Buttons */}
-            <div className="space-y-4">
-              <button
-                onClick={() =>
-                  navigate("/payment", {
-                    state: { subject: subject.name, classRange: "1-6" },
-                  })
-                }
-                className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 rounded-xl transition"
-              >
-                Classes 1 – 6
-              </button>
+            {/* Description */}
+            <p className="text-gray-700 text-lg mb-6">
+              {card.description}
+            </p>
 
-              <button
-                onClick={() =>
-                  navigate("/payment", {
-                    state: { subject: subject.name, classRange: "6-12" },
-                  })
-                }
-                className="w-full bg-gray-800 hover:bg-black text-white font-semibold py-3 rounded-xl transition"
-              >
-                Classes 6 – 12
-              </button>
-            </div>
+            {/* Bottom Line */}
+            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full group-hover:w-40 transition-all duration-500"></div>
+
           </div>
         ))}
       </div>

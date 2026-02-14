@@ -9,13 +9,13 @@ const RegistrationForm = () => {
 
   const { subject, classRange } = location.state || {};
 
-  const price = classRange === "1-6" ? 99 : 199;
+  const price = classRange === "6-9" ? 99 : 199;
 
   // 🔥 Generate class options dynamically
-  const classOptions =
-    classRange === "1-6"
-      ? ["1", "2", "3", "4", "5", "6"]
-      : ["6", "7", "8", "9", "10", "11", "12"];
+ const classOptions =
+  classRange === "6-9"
+    ? ["6", "7", "8", "9"]
+    : ["10", "11", "12"];
 
   const [formData, setFormData] = useState({
     name: "",
