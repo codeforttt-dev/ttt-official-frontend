@@ -6,7 +6,7 @@ const SubjectCards = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("olympiad-payment", {
+    navigate("/olympiad-payment", {
       state: { classRange: "6-12" },
     });
   };

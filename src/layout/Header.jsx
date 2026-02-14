@@ -1,10 +1,29 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { FaUser, FaUserPlus, FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.jpeg";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleOlympiadClick = (e) => {
+    e.preventDefault();
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document
+          .getElementById("olympiad-section")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      document
+        .getElementById("olympiad-section")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -14,13 +33,10 @@ const Header = () => {
     { name: "Schools! Don't miss This", path: "/schools" },
     { name: "Terms of Use", path: "/terms" },
     { name: "Testimonial", path: "/testimonial" },
-    { name: "Vision Mission", path: "/vission" }, // spelling fixed
+    { name: "Vision Mission", path: "/vission" },
     { name: "Why Choose Us", path: "/why" },
     { name: "Videos", path: "/videos" },
-    { name: "olympiad", path: "/olympiad" },
-    
-
-
+    { name: "Olympiad", path: "#" },
   ];
 
   return (
@@ -28,7 +44,7 @@ const Header = () => {
 
       <div className="max-w-[1600px] mx-auto flex justify-between items-center">
 
-        {/* ================= LOGO ================= */}
+        {/* LOGO */}
         <div className="flex items-center">
           <img
             src={logo}
@@ -37,27 +53,37 @@ const Header = () => {
           />
         </div>
 
-        {/* ================= DESKTOP NAV ================= */}
+        {/* DESKTOP NAV */}
         <nav className="hidden lg:flex flex-wrap justify-center gap-x-6 gap-y-4 text-lg font-semibold text-gray-900">
           {navLinks.map((link, index) => (
-            <NavLink
-              key={index}
-              to={link.path}
-              className={({ isActive }) =>
-                `transition hover:text-black ${
-                  isActive ? "text-black underline" : ""
-                }`
-              }
-            >
-              {link.name}
-            </NavLink>
+            link.name === "Olympiad" ? (
+              <a
+                key={index}
+                href="#"
+                onClick={handleOlympiadClick}
+                className="transition hover:text-black"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <NavLink
+                key={index}
+                to={link.path}
+                className={({ isActive }) =>
+                  `transition hover:text-black ${
+                    isActive ? "text-black underline" : ""
+                  }`
+                }
+              >
+                {link.name}
+              </NavLink>
+            )
           ))}
         </nav>
 
-        {/* ================= BUTTONS ================= */}
+        {/* BUTTONS */}
         <div className="hidden lg:flex gap-4 items-center">
 
-          {/* Login */}
           <NavLink to="/login">
             <div className="flex items-center bg-gradient-to-r from-red-600 to-red-500 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:shadow-2xl hover:scale-105 hover:from-red-700 hover:to-red-600 transition-all duration-300 cursor-pointer">
               <span className="mr-2">LOGIN</span>
@@ -65,7 +91,6 @@ const Header = () => {
             </div>
           </NavLink>
 
-          {/* Signup */}
           <NavLink to="/signup">
             <div className="flex items-center bg-gradient-to-r from-green-600 to-green-500 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:shadow-2xl hover:scale-105 hover:from-green-700 hover:to-green-600 transition-all duration-300 cursor-pointer">
               <span className="mr-2">SIGNUP</span>
@@ -75,30 +100,44 @@ const Header = () => {
 
         </div>
 
-        {/* ================= MOBILE MENU ICON ================= */}
+        {/* MOBILE ICON */}
         <div className="lg:hidden text-2xl cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
 
       </div>
 
-      {/* ================= MOBILE MENU ================= */}
+      {/* MOBILE MENU */}
       {menuOpen && (
         <div className="lg:hidden bg-yellow-300 mt-4 rounded-lg p-6 space-y-4 text-lg font-semibold text-gray-900">
 
           {navLinks.map((link, index) => (
-            <NavLink
-              key={index}
-              to={link.path}
-              onClick={() => setMenuOpen(false)}
-              className={({ isActive }) =>
-                `block transition hover:text-black ${
-                  isActive ? "text-black underline" : ""
-                }`
-              }
-            >
-              {link.name}
-            </NavLink>
+            link.name === "Olympiad" ? (
+              <a
+                key={index}
+                href="#"
+                onClick={(e) => {
+                  handleOlympiadClick(e);
+                  setMenuOpen(false);
+                }}
+                className="block transition hover:text-black"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <NavLink
+                key={index}
+                to={link.path}
+                onClick={() => setMenuOpen(false)}
+                className={({ isActive }) =>
+                  `block transition hover:text-black ${
+                    isActive ? "text-black underline" : ""
+                  }`
+                }
+              >
+                {link.name}
+              </NavLink>
+            )
           ))}
 
           <div className="flex gap-4 pt-4">

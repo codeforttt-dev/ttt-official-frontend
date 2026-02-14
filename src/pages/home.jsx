@@ -187,7 +187,13 @@ const Home = () => {
       {/* ================= OTHER SECTIONS ================= */}
       <AboutSection />
       <ThreeSection />
-      <SubjectCards />
+    <div
+  id="olympiad-section"
+  className="min-h-screen bg-gradient-to-r from-[#FFD42A] to-[#FFC107] py-20 px-6"
+>
+  <SubjectCards />
+</div>
+
       <WhyJoin />
       {/* <DownloadApp />
       <MediaGallery /> */}
