@@ -17,7 +17,7 @@ const Header = () => {
     { name: "Vision Mission", path: "/vission" }, // spelling fixed
     { name: "Why Choose Us", path: "/why" },
     { name: "Videos", path: "/videos" },
-    { name: "Registration", path: "/registration" },
+    { name: "olympiad", path: "/olympiad" },
     
 
 

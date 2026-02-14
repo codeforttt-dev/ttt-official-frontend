@@ -13,6 +13,7 @@ import ReturnRefund from "../pages/returnRefund";
 import RegistrationForm from "../component/registrationForm";
 import Signup from "../pages/signup";
 import Login from "../pages/login";
+import SubjectCards from "../pages/subjectCards";
 
 function AppRoutes() {
   return (
@@ -25,9 +26,10 @@ function AppRoutes() {
       <Route path="/testimonial" element={<Testimonial/>}/>
 <Route path="/termsconditions" element={<TermsAndConditions/>}/>
       <Route path="/return" element={<ReturnRefund/>}/>
-      <Route path="/payment" element={<RegistrationForm/>}/>
+      <Route path="/olympiad-payment" element={<RegistrationForm/>}/>
       <Route path ="/signup" element={<Signup/>}/>
       <Route path ="/login" element={<Login/>}/>
+       <Route path ="/olympiad" element={<SubjectCards/>}/>
     </Routes>
   );
 }
