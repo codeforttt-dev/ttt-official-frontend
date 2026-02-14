@@ -9,6 +9,8 @@ import {
   FaPhone,
 } from "react-icons/fa";
 import logo from "../assets/logo.jpeg";
+   import { Link } from "react-router-dom";
+
 
 
 const Footer = () => {
@@ -63,11 +65,16 @@ const Footer = () => {
                 { label: "Terms & Conditions", href: "/termsconditions" },
                 { label: "Return & Refund", href: "/return" },
               ].map((item) => (
-                <a key={item.label} href={item.href} className="hover:text-yellow-400">
-                  {item.label}
-                </a>
-              ))}
-            </div>
+                  <Link
+    key={item.label}
+    to={item.href}
+    className="hover:text-yellow-400 transition"
+  >
+    {item.label}
+  </Link>
+           
+            ))}
+             </div>
 
             <button className="mt-8 flex items-center gap-2 bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full font-semibold transition">
               Request a Callback
