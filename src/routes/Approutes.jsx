@@ -11,6 +11,8 @@ import TermsAndConditions from "../pages/termsandConditions";
 import ReturnRefund from "../pages/returnRefund";
 
 import RegistrationForm from "../component/registrationForm";
+import Signup from "../pages/signup";
+import Login from "../pages/login";
 
 function AppRoutes() {
   return (
@@ -24,6 +26,8 @@ function AppRoutes() {
       <Route path="/termsandconditions" element={<TermsAndConditions/>}/>
       <Route path="/return" element={<ReturnRefund/>}/>
       <Route path="/payment" element={<RegistrationForm/>}/>
+      <Route path ="/signup" element={<Signup/>}/>
+      <Route path ="/login" element={<Login/>}/>
     </Routes>
   );
 }
